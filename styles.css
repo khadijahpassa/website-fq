@@ -1,16 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Mogra&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
+:root {
+  --background: #f5f7fb;
+  --primary: #211a3b;
+  --secondary: #548bfc;
+  --tertiary: #234a9a;
+  --light-blue: #bce1ff;
+  --orange: #ff8465;
+  --yellow: #ffd098;
+}
 
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Poppins';
+  font-family: "Outfit", sans-serif;
   margin: 0;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--primary);
 }
 
 /* Container */
@@ -21,6 +35,15 @@ a {
   display: flex;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--background);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -29,9 +52,15 @@ a {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #548BFC;
+  color: var(--secondary);
+}
+
+.logo span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary);
 }
 
 .navbar ul {
@@ -41,75 +70,77 @@ a {
 }
 
 .navbar li {
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: color 0.3s;
-  color: #211A3B;
-  font-family: Outfit;
-  font-size: 16px;
+  color: var(--primary);
+  font-family: "Outfit", sans-serif;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 
 .navbar li:hover {
-  color: #FF8465;
+  color: var(--orange);
 }
 
 .btn-contact {
-  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 50px;
   color: #fff;
-  background-color: #FF8465;
+  background-color: var(--orange);
 }
 
 .home {
+  margin-top: 4rem;
   min-height: 680px;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
   position: relative;
 }
 
-.home-img {
-  width: 370px;
+.home-img img{
+  width: 400px;
   position: relative;
 }
 
 .intro h1 {
-  color: #FF8465;
-  font-family: Outfit;
-  font-size: 40px;
+  color: var(--orange);
+  font-family: "Outfit", sans-serif;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 1rem;
+  line-height: 1.2rem;
   margin-bottom: 10%;
 }
 
 .intro h2 {
-  color: #211A3B;
-font-family: Outfit;
-font-size: 70px;
-font-style: normal;
-font-weight: 600;
-line-height: 0.4;
+  color: var(--primary);
+  font-family: "Outfit", sans-serif;
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.4;
 }
 
 .intro p {
-  color: #211A3B;
-  font-family: Outfit;
-  font-size: 20px;
+  color: var(--primary);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin-top: 10%;
   width: 410px;
+  opacity: 0.7;
 }
 
 .intro p span {
-  color: #211A3B;
-  font-family: Outfit;
-  font-size: 16px;
+  color: var(--primary);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -121,37 +152,35 @@ line-height: 0.4;
   justify-content: start; /* Posisi ikon mulai dari kiri */
   align-items: center; /* Pastikan vertikal sejajar */
   gap: 15px; /* Beri jarak antar ikon */
+  transition: color 0.5s ease;
 }
 
 .social-links i {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px; /* Ukuran lebih kecil */
-  height: 40px; /* Ukuran lebih kecil */
-  background-color: #E7E9EE;
+  width: 50px; /* Ukuran lebih kecil */
+  height: 50px; /* Ukuran lebih kecil */
+  background-color: #e7e9ee;
   border-radius: 50%; /* Tetap bulat */
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 .social-links i:hover {
-  background-color: #FFD098; /* Latar saat hover */
+  background-color: var(--yellow); /* Latar saat hover */
   transform: scale(1.1); /* Efek membesar saat hover */
+  transition: color 0.5s ease;
 }
 
 .social-links i {
-  font-size: 18px; /* Ukuran ikon disesuaikan */
-  color: #211A3B;
-  transition: color 0.3s ease;
-}
-
-.social-links i:hover {
-  color: #fff; /* Warna ikon berubah menjadi putih saat hover */
+  font-size: 1.8rem; /* Ukuran ikon disesuaikan */
+  color: var(--primary);
+  transition: color 0.5s ease;
 }
 
 .btn {
   border-radius: 50px;
-  background: #548BFC;
+  background: var(--secondary);
   display: inline-flex;
   padding: 9px 28px;
   justify-content: center;
@@ -160,98 +189,22 @@ line-height: 0.4;
   color: #fff;
 }
 
-/* Section About */
-/* Section About */
-.about {
-  background-color: #BCE1FF; /* Warna latar cerah */
-  padding: 50px 0; /* Ruang atas dan bawah */
-}
-
-.about-bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.about .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  max-width: 1280px; /* Lebar maksimum */
-  margin: 0 auto; /* Tengah */
-  flex-wrap: wrap; /* Responsif, konten terurai jika layar kecil */
-}
-
-.introduce {
-  max-width: 600px;
-  text-align: left; /* Konten sejajar ke kiri */
-}
-
-.introduce h1 {
-  color: #211A3B;
-  font-family: Outfit;
-  font-size: 52px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.introduce h2 {
-  color: #548BFC;
-font-family: Outfit;
-font-size: 32px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-margin-bottom: 3%;
-}
-
-.introduce h2 span{
-  color: #211A3B;
-  font-family: Outfit;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.introduce p {
-  color: #211A3B;
-  font-family: Outfit;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-bottom: 10%;
-}
-
-.introduce p span {
-  opacity: 0.7;
-  color: #000000;
-  font-family: Outfit;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-
 .social-links .btn {
-  background-color: #548BFC;
+  background-color: var(--secondary);
   color: #fff;
   padding: 12px 25px;
   border-radius: 30px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .social-links .btn:hover {
   background-color: #FF8465; /* Latar berubah saat hover */
   transform: translateY(-5px); /* Sedikit mengangkat tombol */
 }
+
+
