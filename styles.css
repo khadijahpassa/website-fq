@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Mogra&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins';
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #548BFC;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar li {
+  font-size: 1rem;
+  transition: color 0.3s;
+  color: #211A3B;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.navbar li:hover {
+  color: #FF8465;
+}
+
+.btn-contact {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #FF8465;
+}
+
+.home {
+  min-height: 680px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.home-img {
+  width: 370px;
+  position: relative;
+}
+
+.intro h1 {
+  color: #FF8465;
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1rem;
+  margin-bottom: 10%;
+}
+
+.intro h2 {
+  color: #211A3B;
+font-family: Outfit;
+font-size: 70px;
+font-style: normal;
+font-weight: 600;
+line-height: 0.4;
+}
+
+.intro p {
+  color: #211A3B;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10%;
+  width: 410px;
+}
+
+.intro p span {
+  color: #211A3B;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.social-links {
+  margin-top: 10%;
+  display: flex; /* Flexbox untuk pengaturan sejajar */
+  justify-content: start; /* Posisi ikon mulai dari kiri */
+  align-items: center; /* Pastikan vertikal sejajar */
+  gap: 15px; /* Beri jarak antar ikon */
+}
+
+.social-links i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Ukuran lebih kecil */
+  height: 40px; /* Ukuran lebih kecil */
+  background-color: #E7E9EE;
+  border-radius: 50%; /* Tetap bulat */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links i:hover {
+  background-color: #FFD098; /* Latar saat hover */
+  transform: scale(1.1); /* Efek membesar saat hover */
+}
+
+.social-links i {
+  font-size: 18px; /* Ukuran ikon disesuaikan */
+  color: #211A3B;
+  transition: color 0.3s ease;
+}
+
+.social-links i:hover {
+  color: #fff; /* Warna ikon berubah menjadi putih saat hover */
+}
+
+.btn {
+  border-radius: 50px;
+  background: #548BFC;
+  display: inline-flex;
+  padding: 9px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+/* Section About */
+/* Section About */
+.about {
+  background-color: #BCE1FF; /* Warna latar cerah */
+  padding: 50px 0; /* Ruang atas dan bawah */
+}
+
+.about-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1280px; /* Lebar maksimum */
+  margin: 0 auto; /* Tengah */
+  flex-wrap: wrap; /* Responsif, konten terurai jika layar kecil */
+}
+
+.introduce {
+  max-width: 600px;
+  text-align: left; /* Konten sejajar ke kiri */
+}
+
+.introduce h1 {
+  color: #211A3B;
+  font-family: Outfit;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.introduce h2 {
+  color: #548BFC;
+font-family: Outfit;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 3%;
+}
+
+.introduce h2 span{
+  color: #211A3B;
+  font-family: Outfit;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.introduce p {
+  color: #211A3B;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10%;
+}
+
+.introduce p span {
+  opacity: 0.7;
+  color: #000000;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+.social-links .btn {
+  background-color: #548BFC;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.social-links .btn:hover {
+  background-color: #FF8465; /* Latar berubah saat hover */
+  transform: translateY(-5px); /* Sedikit mengangkat tombol */
+}
