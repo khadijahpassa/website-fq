@@ -89,6 +89,11 @@ header {
   border-radius: 50px;
   color: #fff;
   background-color: var(--orange);
+  transition: all 0.5s ease;
+}
+.btn-contact:hover {
+  background-color: var(--secondary); /* Latar berubah saat hover */
+  transform: translateY(-5px); /* Sedikit mengangkat tombol */
 }
 
 .home {
@@ -101,7 +106,7 @@ header {
   position: relative;
 }
 
-.home-img img{
+.home-img img {
   width: 400px;
   position: relative;
 }
@@ -152,7 +157,7 @@ header {
   justify-content: start; /* Posisi ikon mulai dari kiri */
   align-items: center; /* Pastikan vertikal sejajar */
   gap: 15px; /* Beri jarak antar ikon */
-  transition: color 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .social-links i {
@@ -163,19 +168,19 @@ header {
   height: 50px; /* Ukuran lebih kecil */
   background-color: #e7e9ee;
   border-radius: 50%; /* Tetap bulat */
-  transition: background-color 0.5s ease, transform 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .social-links i:hover {
   background-color: var(--yellow); /* Latar saat hover */
   transform: scale(1.1); /* Efek membesar saat hover */
-  transition: color 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .social-links i {
   font-size: 1.8rem; /* Ukuran ikon disesuaikan */
   color: var(--primary);
-  transition: color 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .btn {
@@ -203,9 +208,42 @@ header {
 }
 
 .social-links .btn:hover {
-  background-color: #FF8465; /* Latar berubah saat hover */
+  background-color: var(--orange); /* Latar berubah saat hover */
   transform: translateY(-5px); /* Sedikit mengangkat tombol */
 }
+
+/* Marquee */
+.text-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  background: var(--secondary);
+  overflow: hidden;
+}
+
+.marquee {
+  animation: marquee 5000ms linear infinite;
+  color: var(--background);
+  font-size: 1.2rem;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 2rem 6rem;
+}
+
+.text-wrapper:hover {
+  .marquee {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+/* Marquee ends */
 
 /* Gallery */
 .gallery {
@@ -227,5 +265,3 @@ header {
 .gallery-item img:hover {
   transform: scale(1.05);
 }
-
-
