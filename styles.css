@@ -29,7 +29,7 @@ body {
 
 /* Container */
 .container {
-  max-width: 1280px;
+  padding: 0 6%;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -83,7 +83,7 @@ header {
   color: var(--orange);
 }
 
-.btn-contact {
+.btn-orange {
   font-size: 1.2rem;
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
@@ -91,7 +91,7 @@ header {
   background-color: var(--orange);
   transition: all 0.5s ease;
 }
-.btn-contact:hover {
+.btn-orange:hover {
   background-color: var(--secondary); /* Latar berubah saat hover */
   transform: translateY(-5px); /* Sedikit mengangkat tombol */
 }
@@ -246,11 +246,37 @@ header {
 /* Marquee ends */
 
 /* Gallery */
+#gallery {
+  padding: 3rem 6%;
+}
+
 .gallery {
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
+}
+
+.gallery-header {
+  justify-content: center;
+  text-align: center;
+}
+
+.gallery-header h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.gallery-header p {
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 300;
+  opacity: 0.7;
+  margin-bottom: 2.6rem;
 }
 
 .gallery-item img {
@@ -265,25 +291,48 @@ header {
 .gallery-item img:hover {
   transform: scale(1.05);
 }
+
+#gallery .btn-orange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  margin: 2rem auto auto;
+}
+
 /* Footer */
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 9%;  
+  padding: 2rem 9%;
   background: var(--tertiary);
   color: var(--background);
 }
 
+.logo-footer {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--background);
+}
+
+.logo-footer span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
 .footer-iconTop a {
   display: inline-flex;
-  justify-content: center;   
-  align-items: center;       
+  justify-content: center;
+  align-items: center;
   background: var(--light-blue);
-  padding: .8rem;
+  padding: 0.8rem;
   border-radius: 100px;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 .footer-iconTop a:hover {
   box-shadow: 0 0 1rem var(--light-blue);
