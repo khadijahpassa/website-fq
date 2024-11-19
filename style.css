@@ -106,9 +106,22 @@ header {
   position: relative;
 }
 
-.home-img img {
-  width: 400px;
+.home-img {
   position: relative;
+  width: 400px;  /* Sesuaikan dengan lebar kontainer */
+}
+
+.img-windah {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Tambahkan ukuran yang sesuai jika perlu */
+  max-width: 100%; /* Atur lebar gambar sesuai kebutuhan */
+}
+
+.img-header {
+  width: 100%;
 }
 
 .intro h1 {
